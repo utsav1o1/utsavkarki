@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-sizing: border-box;
+            justify-content: flex-start;
+        }
+
+        .project-card {
+            background-color: #2f2f2f;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 20px);
+            /* show 3 cards per row with gap */
+            min-width: 280px;
+            max-width: 350px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        /* Responsive for 2 cards per row on smaller screens */
+        @media (max-width: 1000px) {
+            .project-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        /* Responsive for 1 card per row on very small screens */
+        @media (max-width: 600px) {
+            .project-card {
+                flex: 1 1 100%;
+            }
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            user-select: none;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #28E98C;
+        }
+
+        .project-card p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .project-card a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            align-self: flex-start;
+        }
+
+        .project-card:hover {
+            border-color: #28E98C;
+            background-color: #252525;
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="user_info_block">
+            <img src="/imgs/profile_pic/utsavkarkipp.jpg" alt="Your Photo" />
+            <h4>Utsav Karki</h4>
+            <p>Data Analyst | Trainer</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/utsav-karki-5675021a4/" class="linkedin"> <i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/utsav1o1" class="github"><i class="bi bi-github"></i></a>
+                <a href="#" class="medium"><i class="bi bi-medium"></i></a>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <section class="section">
+                <h1 style="margin-bottom: 10%;">My <span class="text-success-new">Projects</span></h1>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="./imgs/project_img/366fff1f97.webp" alt="HealthDocX Project Image" />
+                        <h3>HealthDocX</h3>
+                        <p>A unified health record system using Express.js and MongoDB.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x180?text=Real+Estate+CRM"
+                            alt="Real Estate CRM Project Image" />
+                        <h3>Real Estate CRM</h3>
+                        <p>Property management system built with Laravel and Livewire.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x180?text=Finance+Tracker"
+                            alt="Finance Tracker Project Image" />
+                        <h3>Finance Tracker</h3>
+                        <p>Track personal expenses with category insights. Made with PHP + MySQL.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x180?text=Idea+College+Hunt"
+                            alt="Idea College Hunt Project Image" />
+                        <h3>Idea College Hunt</h3>
+                        <p>Finalist idea that competed among 140+ tech innovations.</p>
+                        <a href="#">View Project →</a>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
